@@ -1,0 +1,494 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+nav {
+  background-color: #000;
+  color: white;
+  padding: 20px 50px;
+}
+
+.navTop {
+  /* making navbar horizontal */
+  display: flex;
+  align-items: center;
+  /* giving space */
+  justify-content: space-between;
+}
+.search {
+  /* search icon  according to input search box */
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.searchInput {
+  /* styling input box in nav bar */
+  border: none;
+  background-color: transparent;
+}
+.searchInput::placeholder {
+  color: lightgray;
+}
+.limitedOffer {
+  font-size: 20px;
+  border-bottom: solid 2px green;
+  cursor: pointer;
+}
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.menuItem {
+  margin-right: 50px;
+  color: lightgray;
+  font-weight: 400;
+}
+.slider {
+  background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 85%);
+  /* this property is to hide scroll bar appears in bottom */
+  overflow: hidden;
+}
+.sliderWrapper {
+  display: flex;
+  width: 500vw;
+  transition: all 1s ease-in-out;
+}
+/* this is for h1,button,price for each slider */
+.sliderItem {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.sliderBg {
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  /* background-color: yellow; */
+  position: absolute;
+}
+/* text and button design of each slide */
+.sliderTitle {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  font-weight: 900;
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.sliderImg {
+  z-index: 1;
+}
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-weight: 300;
+  font-size: 60px;
+  text-align: center;
+  /* color: #369e62; */
+  border: 1px solid gray;
+  z-index: 1;
+}
+#sp1 {
+  color: #369e62;
+}
+
+#sp2 {
+  color: #663399;
+}
+#sp3 {
+  color: #008080;
+}
+#sp4 {
+  color: rgb(100, 149, 237);
+}
+#sp5 {
+  color: rgb(124, 115, 80);
+}
+/* design for buy button  */
+.buyButton {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  font-weight: 900;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  border: 1px solid gray;
+  z-index: 1;
+}
+.buyButton:hover {
+  background-color: white;
+  color: black;
+}
+/* for selecting each slide, we use nth child properties */
+.sliderItem:nth-child(1) .sliderBg {
+  background-color: #369e62;
+}
+.sliderItem:nth-child(2) .sliderBg {
+  background-color: #663399;
+}
+.sliderItem:nth-child(3) .sliderBg {
+  background-color: #008080;
+}
+.sliderItem:nth-child(4) .sliderBg {
+  background-color: rgb(100, 149, 237);
+}
+.sliderItem:nth-child(5) .sliderBg {
+  background-color: rgb(124, 115, 80);
+}
+
+/* features styling */
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+.feature {
+  display: flex;
+  /*feature text in column*/
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureImg {
+  width: 50px;
+  height: 50px;
+}
+.featureTitle {
+  font-weight: 600;
+  font-style: 20px;
+  margin: 20px;
+}
+.featureDesc {
+  columns: gray;
+  width: 50%;
+  height: 100px;
+}
+.products {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+.productImg {
+  width: 50%;
+}
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+.productTitle {
+  font-size: 75px;
+  font-weight: 900;
+}
+.productDesc {
+  font-style: 24px;
+  color: gray;
+}
+.colors,
+.sizes {
+  display: flex;
+  margin-bottom: 20px;
+}
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.color:last-child {
+  background-color: darkblue;
+}
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.productButton {
+  background-color: #000;
+  color: white;
+  width: 150px;
+  height: 50px;
+}
+.payment {
+  width: 500px;
+  height: 550px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+.payTitle {
+  font-size: 20px;
+  color: lightgray;
+}
+label {
+  font-size: 30px;
+  font-weight: 300;
+}
+.payInput {
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid darkgray;
+}
+.payInput::placeholder {
+  color: rgb(163, 163, 163);
+}
+.cardIcons {
+  display: flex;
+}
+.cardIcon {
+  margin-right: 10px;
+}
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.sm {
+  width: 30%;
+  /* padding-top: 10px; */
+}
+.payButton {
+  position: absolute;
+  height: 40px;
+  bottom: -40;
+  width: 100%;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: #369e62;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.close {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+.gallery {
+  padding: 50px;
+  display: flex;
+}
+.galleryItem {
+  flex: 1;
+  padding: 50px;
+}
+.galleryImg {
+  width: 100%;
+}
+.newSeason {
+  display: flex;
+}
+.nsItem {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nsImg {
+  width: 100%;
+  height: 500px;
+}
+.nsTitle {
+  font-style: 40px;
+}
+.nsButton {
+  cursor: pointer;
+  padding: 15px;
+  font-weight: 600;
+}
+footer {
+  display: flex;
+}
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.fMenuTitle {
+  font-size: 26px;
+}
+.fList {
+  padding: 0;
+  list-style: none;
+}
+.fListItem {
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.footerRight {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.fInput {
+  padding: 5px;
+}
+.fButton {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+.fIcons {
+  display: flex;
+}
+.fIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+}
+.copyright {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 480px) {
+  nav {
+    /* background-color: red; */
+    padding: 20px;
+  }
+  .search {
+    display: none;
+  }
+  .navBottom {
+    flex-wrap: wrap;
+  }
+  .menuItem {
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .slider {
+    clip-path: none;
+  }
+  .sliderImg {
+    width: 90%;
+  }
+  .sliderBg {
+    width: 100%;
+    height: 100%;
+  }
+  .sliderTitle {
+    display: none;
+  }
+  .sliderPrice {
+    top: unset;
+    bottom: -50px;
+    background-color: lightgray;
+    left: 0;
+    font-size: 50px;
+  }
+  .buyButton {
+    top: 0;
+    right: 0;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .products {
+    clip-path: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .productDetails {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+  }
+  .productTitle {
+    font-size: 50px;
+    margin: 0;
+  }
+  .gallery {
+    display: none;
+  }
+  .newSeason {
+    flex-direction: column;
+  }
+  .nsItem:nth-child(2) {
+    padding: 50px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerLeft {
+    padding: 20px;
+    width: 90%;
+  }
+  .footerLeft {
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+  .payment {
+    width: 90%;
+    padding: 20px;
+  }
+}
