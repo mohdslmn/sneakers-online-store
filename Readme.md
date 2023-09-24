@@ -42,4 +42,4 @@ for @mobile screen!!!
 
 https://lustrous-tapioca-25022c.netlify.app
 Feel free to explore our Online Sneaker Store! 🚀
-http://127.0.0.1:5500/index.html#products
+
